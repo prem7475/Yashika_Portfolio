@@ -16,8 +16,8 @@ export default function WorkShowcase() {
     {
       title: "Multi-Channel Sourcing & Candidate Pipeline Strategy",
       company: "SnapFind & Freelance Recruitment",
-      desc: "Designed candidate sourcing models leveraging LinkedIn, Internshala, Indeed, and Apna to source entry-to-mid level roles while maintaining quick TAT.",
-      tags: ["Talent Sourcing", "Recruitment", "TAT Reduction"],
+      desc: "Designed candidate sourcing models leveraging LinkedIn, Internshala, Indeed, and Apna to source entry-to-mid level roles while maintaining quick turnaround times.",
+      tags: ["Talent Sourcing", "Recruitment", "Candidate Screening"],
       img: "/sumeet-award.png"
     },
     {
@@ -30,11 +30,11 @@ export default function WorkShowcase() {
   ];
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-28" id="work">
+    <section className="relative py-16 sm:py-20 bg-white" id="work">
       <div className="container-x">
-        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading
-            eyebrow="HR PROJECTS & CASE STUDIES"
+            eyebrow="HR PROJECTS & EXPERIENCE"
             title="Strategic HR Initiatives & Deliverables"
             subtitle="Demonstrating structured thinking, process standardization, candidate experience, and operational rigor."
           />
@@ -44,57 +44,56 @@ export default function WorkShowcase() {
           </Link>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {hrProjects.map((p, idx) => (
             <motion.div
               key={p.title}
-              initial={{ opacity: 0, y: 18 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-120px" }}
-              transition={{ duration: 0.65, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5, delay: idx * 0.05 }}
             >
-              <GlowCard className="group overflow-hidden p-0 bg-white border-[#B8975B]/25 hover:border-[#8C6D34] shadow-sm flex flex-col justify-between h-full">
+              <GlowCard className="group overflow-hidden p-0 bg-white border border-slate-200 shadow-sm flex flex-col justify-between h-full">
                 <div>
-                  <div className="relative h-52 overflow-hidden bg-[#FAF8F5]">
+                  <div className="relative h-48 overflow-hidden bg-slate-100">
                     <img
                       src={p.img}
                       alt={p.title}
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="h-full w-full object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute left-4 top-4">
-                      <Badge className="bg-white/95 text-[#8C6D34] border-[#B8975B]/30 shadow-md">
-                        FEATURED HR CASE STUDY
+                    <div className="absolute left-3 top-3">
+                      <Badge className="bg-white text-slate-800 border border-slate-200 shadow-sm">
+                        FEATURED
                       </Badge>
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <div className="text-xs font-bold text-[#8C6D34] uppercase tracking-wider">
+                  <div className="p-5">
+                    <div className="text-xs font-bold text-blue-600 uppercase tracking-wider">
                       {p.company}
                     </div>
-                    <h3 className="font-display text-2xl font-bold text-[#1A1D20] mt-1">
+                    <h3 className="font-display text-lg font-bold text-slate-900 mt-0.5">
                       {p.title}
                     </h3>
-                    <p className="mt-2.5 text-sm leading-relaxed text-[#505765]">
+                    <p className="mt-2 text-xs leading-relaxed text-slate-600">
                       {p.desc}
                     </p>
                   </div>
                 </div>
 
-                <div className="p-6 pt-0">
-                  <div className="flex flex-wrap gap-2 mb-4">
+                <div className="p-5 pt-0">
+                  <div className="flex flex-wrap gap-1.5 mb-3">
                     {p.tags.map((t) => (
-                      <span key={t} className="rounded-lg bg-[#FAF7F2] border border-[#B8975B]/20 px-2.5 py-1 text-[11px] font-semibold text-[#8C6D34]">
+                      <span key={t} className="rounded-md bg-slate-100 border border-slate-200 px-2 py-0.5 text-[10px] font-semibold text-slate-700">
                         {t}
                       </span>
                     ))}
                   </div>
 
-                  <div className="pt-3 border-t border-[#B8975B]/15 flex items-center justify-between text-xs font-bold text-[#1A1D20] group-hover:text-[#8C6D34] transition-colors">
+                  <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                     <span>DELIVERABLE SCOPE</span>
-                    <span>READ CASE STUDY →</span>
+                    <span>VIEW DETAILS →</span>
                   </div>
                 </div>
               </GlowCard>

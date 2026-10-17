@@ -6,53 +6,48 @@ import Badge from "../ui/Badge";
 export default function Hero() {
   return (
     <section
-      className="relative min-h-[92vh] flex items-center pt-28 pb-20 overflow-hidden"
+      className="relative min-h-[88vh] flex items-center pt-24 pb-16 bg-slate-50 border-b border-slate-200"
       id="top"
     >
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -top-32 right-[-5%] h-[580px] w-[580px] rounded-full bg-[radial-gradient(circle_at_center,rgba(184,151,91,0.14),transparent_65%)] blur-3xl" />
-        <div className="absolute bottom-[-10%] left-[-5%] h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle_at_center,rgba(225,215,198,0.35),transparent_65%)] blur-3xl" />
-      </div>
-
       <div className="container-x relative z-10 w-full">
-        <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
           <motion.div
             className="lg:col-span-7"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <div className="flex flex-wrap items-center gap-2.5">
+            <div className="flex flex-wrap items-center gap-2">
               <Badge>MBA HR • VESIM '27</Badge>
-              <span className="text-xs font-semibold tracking-[0.18em] text-[#8C6D34] uppercase">
+              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
                 📍 {profile.location}
               </span>
             </div>
 
-            <h1 className="mt-5 font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.02] tracking-tight text-[#1A1D20]">
-              Yashika <span className="text-gradient-gold">S.</span>
+            <h1 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.05]">
+              Yashika S.
             </h1>
 
-            <p className="mt-3 text-lg sm:text-xl font-medium text-[#8C6D34] font-display tracking-wide">
+            <p className="mt-2 text-base sm:text-lg font-semibold text-blue-600 tracking-wide">
               {profile.tagline}
             </p>
 
-            <p className="mt-5 max-w-2xl text-base sm:text-lg leading-relaxed text-[#505765]">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600">
               {profile.subheadline}
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-5 flex flex-wrap gap-1.5">
               {topSkills.slice(0, 5).map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-xl border border-[#B8975B]/25 bg-white/80 px-3 py-1 text-xs font-semibold text-[#3E4450] shadow-sm"
+                  className="rounded-lg border border-slate-200 bg-white px-2.5 py-1 text-xs font-medium text-slate-700 shadow-sm"
                 >
                   {skill}
                 </span>
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+            <div className="mt-7 flex flex-wrap items-center gap-3">
               <a
                 href={profile.linkedin}
                 target="_blank"
@@ -79,44 +74,43 @@ export default function Hero() {
               </Link>
             </div>
 
-            <div className="mt-10 grid gap-4 grid-cols-3 pt-6 border-t border-[#B8975B]/20">
+            <div className="mt-8 grid gap-4 grid-cols-3 pt-5 border-t border-slate-200">
               <div>
-                <div className="font-display text-2xl font-bold text-[#1A1D20]">Sumeet Infra</div>
-                <div className="text-xs font-semibold text-[#8C6D34] uppercase tracking-wider mt-0.5">HR Intern</div>
+                <div className="font-display text-xl font-bold text-slate-900">Sumeet Infra</div>
+                <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-0.5">HR Intern</div>
               </div>
               <div>
-                <div className="font-display text-2xl font-bold text-[#1A1D20]">VESIM '27</div>
-                <div className="text-xs font-semibold text-[#8C6D34] uppercase tracking-wider mt-0.5">3 Committee Roles</div>
+                <div className="font-display text-xl font-bold text-slate-900">VESIM '27</div>
+                <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-0.5">3 Committee Roles</div>
               </div>
               <div>
-                <div className="font-display text-2xl font-bold text-[#1A1D20]">SnapFind</div>
-                <div className="text-xs font-semibold text-[#8C6D34] uppercase tracking-wider mt-0.5">Freelance Recruiter</div>
+                <div className="font-display text-xl font-bold text-slate-900">SnapFind</div>
+                <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-0.5">Freelance Recruiter</div>
               </div>
             </div>
           </motion.div>
 
           <motion.div
             className="lg:col-span-5 flex justify-center lg:justify-end"
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.85, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           >
             <div className="relative w-full max-w-sm sm:max-w-md">
-              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-[#D4B87C]/30 via-[#B8975B]/20 to-transparent blur-xl" />
-              <div className="relative overflow-hidden rounded-3xl border-2 border-[#B8975B]/30 bg-white p-3 shadow-2xl">
-                <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-[#FAF8F5]">
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-2.5 shadow-sm">
+                <div className="aspect-[4/5] overflow-hidden rounded-xl bg-slate-100">
                   <img
                     src={profile.heroImage}
                     alt="Yashika S. — MBA HR Professional"
-                    className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                    className="h-full w-full object-cover object-center"
                   />
                 </div>
 
-                <div className="p-4 bg-white text-center border-t border-[#B8975B]/15">
-                  <span className="font-display text-xl font-bold text-[#1A1D20]">
+                <div className="p-3 bg-white text-center border-t border-slate-100 mt-2">
+                  <span className="font-display text-lg font-bold text-slate-900">
                     Yashika S.
                   </span>
-                  <p className="text-xs font-semibold tracking-[0.18em] text-[#8C6D34] uppercase mt-0.5">
+                  <p className="text-xs font-medium text-slate-500 uppercase tracking-wider mt-0.5">
                     Talent Acquisition • HR Operations • Candidate Experience
                   </p>
                 </div>

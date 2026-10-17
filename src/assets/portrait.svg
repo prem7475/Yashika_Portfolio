@@ -1,41 +1,35 @@
 ﻿<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
   <defs>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#D4B87C"/>
-      <stop offset="0.45" stop-color="#B8975B"/>
-      <stop offset="1" stop-color="#8C6D34"/>
+    <linearGradient id="navy" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1E293B"/>
+      <stop offset="0.45" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#2563EB"/>
     </linearGradient>
-    <radialGradient id="halo" cx="50%" cy="35%" r="70%">
-      <stop offset="0" stop-color="rgba(184,151,91,0.20)"/>
-      <stop offset="0.55" stop-color="rgba(184,151,91,0.08)"/>
-      <stop offset="1" stop-color="rgba(184,151,91,0)"/>
-    </radialGradient>
   </defs>
 
-  <rect width="900" height="1100" rx="48" fill="#FAF8F5"/>
-  <rect width="900" height="1100" rx="48" fill="url(#halo)"/>
+  <rect width="900" height="1100" rx="48" fill="#F8FAFC"/>
 
-  <g opacity="0.12" stroke="#1A1D20" stroke-width="1">
+  <g stroke="#E2E8F0" stroke-width="1">
     <path d="M80 180H820"/>
     <path d="M80 240H820"/>
     <path d="M80 300H820"/>
     <path d="M80 360H820"/>
   </g>
 
-  <g transform="translate(210 270)" opacity="0.95">
-    <circle cx="240" cy="220" r="160" fill="rgba(255,255,255,0.9)" stroke="rgba(184,151,91,0.3)" stroke-width="2"/>
+  <g transform="translate(210 270)">
+    <circle cx="240" cy="220" r="160" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
     <path
       d="M240 420c110 0 200-62 200-140 0-68-62-109-127-132 6-12 10-25 10-39 0-53-44-97-99-97-55 0-99 44-99 97 0 14 3 27 9 39-65 23-127 64-127 132 0 78 90 140 233 140z"
-      fill="#FAF7F2"
-      stroke="#B8975B"
+      fill="#F1F5F9"
+      stroke="#2563EB"
       stroke-width="3"
     />
   </g>
 
-  <text x="90" y="940" font-family="Cormorant Garamond, serif" font-size="64" font-weight="700" fill="url(#gold)">
+  <text x="90" y="940" font-family="Plus Jakarta Sans, sans-serif" font-size="64" font-weight="700" fill="#0F172A">
     Yashika S.
   </text>
-  <text x="92" y="992" font-family="Plus Jakarta Sans, system-ui" font-size="16" letter-spacing="6" fill="#8C6D34">
+  <text x="92" y="992" font-family="Plus Jakarta Sans, sans-serif" font-size="16" letter-spacing="6" fill="#2563EB">
     MBA HR • TALENT ACQUISITION • VESIM '27
   </text>
 </svg>

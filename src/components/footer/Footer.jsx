@@ -3,26 +3,26 @@ import { profile } from "../../data/siteContent";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#B8975B]/20 bg-white/60 py-12 backdrop-blur-md">
-      <div className="container-x flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
+    <footer className="border-t border-slate-200 bg-white py-10">
+      <div className="container-x flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
         <div>
-          <div className="font-display text-2xl font-bold tracking-tight text-[#1A1D20]">
+          <div className="font-display text-xl font-bold tracking-tight text-slate-900">
             Yashika S.
           </div>
-          <div className="mt-1 text-xs font-semibold tracking-[0.2em] text-[#8C6D34] uppercase">
+          <div className="mt-0.5 text-xs font-semibold text-slate-500 uppercase tracking-wider">
             MBA HR • VESIM '27 • TALENT ACQUISITION & HR OPERATIONS
           </div>
-          <div className="mt-2 text-xs text-[#656C7A]">
+          <div className="mt-1 text-xs text-slate-500">
             📍 Mumbai, Maharashtra, India
           </div>
         </div>
 
-        <div className="flex flex-wrap items-center gap-6 text-xs font-semibold text-[#3E4450]">
+        <div className="flex flex-wrap items-center gap-5 text-xs font-semibold text-slate-600">
           <a
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
-            className="hover:text-[#8C6D34] transition-colors flex items-center gap-1.5"
+            className="hover:text-blue-600 transition-colors flex items-center gap-1.5"
             data-cursor="hover"
           >
             <svg className="h-4 w-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
@@ -32,20 +32,20 @@ export default function Footer() {
           </a>
           <a
             href={`mailto:${profile.email}`}
-            className="hover:text-[#8C6D34] transition-colors"
+            className="hover:text-blue-600 transition-colors"
             data-cursor="hover"
           >
             Email Me
           </a>
-          <Link to="/resume" className="hover:text-[#8C6D34] transition-colors" data-cursor="hover">
+          <Link to="/resume" className="hover:text-blue-600 transition-colors" data-cursor="hover">
             Resume
           </Link>
-          <Link to="/contact" className="hover:text-[#8C6D34] transition-colors" data-cursor="hover">
+          <Link to="/contact" className="hover:text-blue-600 transition-colors" data-cursor="hover">
             Contact
           </Link>
         </div>
 
-        <div className="text-xs text-[#786E63]">
+        <div className="text-xs text-slate-400">
           © {new Date().getFullYear()} Yashika S. All rights reserved.
         </div>
       </div>

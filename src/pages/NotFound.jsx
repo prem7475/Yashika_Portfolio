@@ -3,17 +3,17 @@ import PageShell from "../components/ui/PageShell";
 
 export default function NotFound() {
   return (
-    <PageShell className="pt-32 pb-24">
+    <PageShell className="pt-28 pb-20">
       <div className="container-x">
-        <div className="rounded-3xl border border-[#B8975B]/25 bg-white p-10 shadow-lg">
-          <div className="text-xs font-bold tracking-[0.25em] text-[#8C6D34] uppercase">404 — NOT FOUND</div>
-          <h1 className="mt-2 font-display text-4xl font-bold text-[#1A1D20]">
+        <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+          <div className="text-xs font-bold tracking-widest text-blue-600 uppercase">404 — NOT FOUND</div>
+          <h1 className="mt-2 font-display text-3xl font-bold text-slate-900">
             Page Not Found
           </h1>
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#505765]">
+          <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate-600">
             The requested page does not exist or has been moved.
           </p>
-          <Link to="/" className="btn-primary mt-8 text-xs" data-cursor="hover">
+          <Link to="/" className="btn-primary mt-6 text-xs" data-cursor="hover">
             ← Back to Home
           </Link>
         </div>

@@ -48,16 +48,16 @@ export default function Work() {
   ];
 
   return (
-    <PageShell className="pt-28 pb-24">
+    <PageShell className="pt-24 pb-20">
       <div className="container-x">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end border-b border-[#B8975B]/20 pb-8">
+        <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end border-b border-slate-200 pb-6">
           <SectionHeading
             eyebrow="HR PORTFOLIO & WORK"
             title="HR Projects, SOPs & Internship Exposure"
-            subtitle="Detailed overview of real-world deliverables created during corporate internships, freelance recruitment drives, and campus initiatives."
+            subtitle="Overview of deliverables created during corporate internships, freelance recruitment drives, and campus initiatives."
           />
 
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-2">
             <Link to="/" className="btn-ghost text-xs" data-cursor="hover">
               ← Back to Home
             </Link>
@@ -67,54 +67,53 @@ export default function Work() {
           </div>
         </div>
 
-        <div className="mt-12">
+        <div className="mt-8">
           <InternshipCarousel />
         </div>
 
-        <div className="mt-16 space-y-8">
-          <div className="text-xs font-bold tracking-[0.25em] text-[#8C6D34] uppercase">
+        <div className="mt-12 space-y-6">
+          <div className="text-xs font-bold tracking-widest text-slate-500 uppercase">
             FEATURED HR DELIVERABLES
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {hrCaseStudies.map((cs) => (
-              <GlowCard key={cs.title} className="overflow-hidden p-0 bg-white border-[#B8975B]/25 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+              <GlowCard key={cs.title} className="overflow-hidden p-0 bg-white border border-slate-200 shadow-sm flex flex-col justify-between">
                 <div>
-                  <div className="relative h-56 bg-[#FAF8F5]">
+                  <div className="relative h-48 bg-slate-100">
                     <img
                       src={cs.img}
                       alt={cs.title}
                       className="h-full w-full object-cover"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                    <div className="absolute bottom-3 left-3 text-xs font-semibold text-white bg-black/50 px-3 py-1 rounded-full backdrop-blur-md">
+                    <div className="absolute bottom-2.5 left-2.5 text-xs font-semibold text-white bg-slate-900/80 px-2.5 py-0.5 rounded-md">
                       {cs.period}
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <div className="text-xs font-bold tracking-wider text-[#8C6D34] uppercase">
+                  <div className="p-5">
+                    <div className="text-xs font-bold tracking-wider text-blue-600 uppercase">
                       {cs.company}
                     </div>
-                    <h3 className="font-display text-2xl font-bold text-[#1A1D20] mt-1">
+                    <h3 className="font-display text-lg font-bold text-slate-900 mt-0.5">
                       {cs.title}
                     </h3>
-                    <p className="mt-2.5 text-sm leading-relaxed text-[#505765]">
+                    <p className="mt-2 text-xs leading-relaxed text-slate-600">
                       {cs.desc}
                     </p>
                   </div>
                 </div>
 
-                <div className="p-6 pt-0">
-                  <div className="rounded-2xl border border-[#B8975B]/20 bg-[#FAF7F2] p-4">
-                    <div className="text-xs font-bold tracking-wider text-[#8C6D34] uppercase mb-2">
+                <div className="p-5 pt-0">
+                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
+                    <div className="text-[11px] font-bold tracking-wider text-blue-600 uppercase mb-1.5">
                       KEY DELIVERABLES
                     </div>
-                    <ul className="space-y-1.5 text-xs text-[#3E4450]">
+                    <ul className="space-y-1 text-xs text-slate-700">
                       {cs.highlights.map((h) => (
-                        <li key={h} className="flex items-center gap-2">
-                          <span className="h-1.5 w-1.5 rounded-full bg-[#8C6D34]" />
+                        <li key={h} className="flex items-center gap-1.5">
+                          <span className="h-1.5 w-1.5 rounded-full bg-slate-400" />
                           <span>{h}</span>
                         </li>
                       ))}
@@ -126,17 +125,17 @@ export default function Work() {
           </div>
         </div>
 
-        <div className="mt-16 rounded-3xl border border-[#B8975B]/30 bg-gradient-to-r from-white via-[#FAF7F2] to-white p-8 shadow-lg">
-          <div className="text-xs font-bold tracking-[0.25em] text-[#8C6D34] uppercase">
+        <div className="mt-12 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="text-xs font-bold tracking-widest text-blue-600 uppercase">
             CONNECT FOR TA & HR ROLES
           </div>
-          <h3 className="mt-2 font-display text-3xl font-bold text-[#1A1D20]">
+          <h3 className="mt-1 font-display text-2xl font-bold text-slate-900">
             Interested in discussing HR qualifications or hiring mandates?
           </h3>
-          <p className="mt-2 max-w-2xl text-sm text-[#505765]">
+          <p className="mt-1 max-w-2xl text-xs text-slate-600">
             Eager to contribute to forward-thinking HR teams and corporate Talent Acquisition programs.
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-4">
+          <div className="mt-5 flex flex-wrap items-center gap-3">
             <Link to="/contact" className="btn-primary text-xs" data-cursor="hover">
               Get in Touch
             </Link>

@@ -17,26 +17,26 @@ export default function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <div className="text-xs font-semibold tracking-[0.28em] text-[#8C6D34] uppercase">
+        <div className="text-xs font-bold tracking-widest text-blue-600 uppercase">
           {eyebrow}
         </div>
       ) : null}
       <motion.h2
-        className="mt-3 font-display text-4xl leading-[1.08] tracking-tight text-[#1A1D20] sm:text-5xl md:text-6xl"
-        initial={{ opacity: 0, y: 10 }}
+        className="mt-2 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl"
+        initial={{ opacity: 0, y: 8 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-120px" }}
-        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
         {title}
       </motion.h2>
       {subtitle ? (
         <motion.p
-          className="mt-4 text-base leading-relaxed text-[#505765] sm:text-lg"
-          initial={{ opacity: 0, y: 10 }}
+          className="mt-3 text-base leading-relaxed text-slate-600 sm:text-lg"
+          initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-120px" }}
-          transition={{ delay: 0.08, duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ delay: 0.05, duration: 0.5, ease: "easeOut" }}
         >
           {subtitle}
         </motion.p>
