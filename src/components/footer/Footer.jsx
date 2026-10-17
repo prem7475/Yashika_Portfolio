@@ -1,40 +1,52 @@
 ﻿import { Link } from "react-router-dom";
+import { profile } from "../../data/siteContent";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 py-12">
-      <div className="container-x flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+    <footer className="border-t border-[#B8975B]/20 bg-white/60 py-12 backdrop-blur-md">
+      <div className="container-x flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-center">
         <div>
-          <div className="font-display text-lg tracking-wide text-gradient-gold">
-            Nishika Sadane
+          <div className="font-display text-2xl font-bold tracking-tight text-[#1A1D20]">
+            Yashika S.
           </div>
-          <div className="mt-2 text-xs tracking-[0.22em] text-white/45">
-            FINANCE • STRATEGY • CLARITY
+          <div className="mt-1 text-xs font-semibold tracking-[0.2em] text-[#8C6D34] uppercase">
+            MBA HR • VESIM '27 • TALENT ACQUISITION & HR OPERATIONS
+          </div>
+          <div className="mt-2 text-xs text-[#656C7A]">
+            📍 Mumbai, Maharashtra, India
           </div>
         </div>
 
-        <div className="flex items-center gap-4 text-xs text-white/60">
-          <Link to="/work" className="hover:text-white" data-cursor="hover">
-            Work
-          </Link>
-          <Link
-            to="/resume"
-            className="hover:text-white"
+        <div className="flex flex-wrap items-center gap-6 text-xs font-semibold text-[#3E4450]">
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-[#8C6D34] transition-colors flex items-center gap-1.5"
             data-cursor="hover"
           >
+            <svg className="h-4 w-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.7a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a
+            href={`mailto:${profile.email}`}
+            className="hover:text-[#8C6D34] transition-colors"
+            data-cursor="hover"
+          >
+            Email Me
+          </a>
+          <Link to="/resume" className="hover:text-[#8C6D34] transition-colors" data-cursor="hover">
             Resume
           </Link>
-          <Link
-            to="/contact"
-            className="hover:text-white"
-            data-cursor="hover"
-          >
+          <Link to="/contact" className="hover:text-[#8C6D34] transition-colors" data-cursor="hover">
             Contact
           </Link>
         </div>
 
-        <div className="text-xs text-white/40">
-          © {new Date().getFullYear()} Nishika Sadane
+        <div className="text-xs text-[#786E63]">
+          © {new Date().getFullYear()} Yashika S. All rights reserved.
         </div>
       </div>
     </footer>

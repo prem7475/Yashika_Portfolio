@@ -9,7 +9,6 @@ export default function ScrollFX() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Prevent duplicate triggers across route transitions.
     ScrollTrigger.getAll().forEach((t) => t.kill());
 
     const hero = document.getElementById("top");

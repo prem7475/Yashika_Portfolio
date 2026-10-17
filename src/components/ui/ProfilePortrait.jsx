@@ -4,39 +4,38 @@ import fallbackPortrait from "../../assets/portrait.svg";
 import { cn } from "../../utils/cn";
 
 const sizeMap = {
-  sm: "h-32 w-32",
-  md: "h-44 w-44",
-  lg: "h-60 w-60",
+  sm: "h-36 w-36",
+  md: "h-52 w-52",
+  lg: "h-72 w-72 sm:h-80 sm:w-80",
 };
 
 export default function ProfilePortrait({
   className,
   size = "lg",
-  src = "/photo.png",
-  label = "OPEN TO WORK",
+  src = "/profile-hero.jpg",
+  label = "MBA HR @ VESIM '27",
 }) {
   const classes = useMemo(() => sizeMap[size] ?? sizeMap.lg, [size]);
   const [imgSrc, setImgSrc] = useState(src);
 
   return (
     <div className={cn("relative grid place-items-center", classes, className)}>
-      <div className="absolute -inset-10 rounded-full bg-[radial-gradient(circle_at_center,rgba(200,168,90,0.22),transparent_60%)] blur-3xl" />
-      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-gold-200 via-gold-400 to-gold-700 opacity-80" />
-      <div className="absolute inset-[2px] rounded-full bg-ink-950" />
+      <div className="absolute -inset-6 rounded-full bg-[radial-gradient(circle_at_center,rgba(184,151,91,0.22),transparent_70%)] blur-2xl" />
+      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#D4B87C] via-[#B8975B] to-[#8C6D34] p-[3px] shadow-lg" />
 
-      <div className="relative h-full w-full overflow-hidden rounded-full border border-white/10 bg-white/5">
+      <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-white bg-white shadow-xl">
         <img
           src={imgSrc}
-          alt="Nishika Sadane"
-          className="h-full w-full object-cover"
+          alt="Yashika S."
+          className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
           onError={() => setImgSrc(fallbackPortrait)}
-          loading="lazy"
+          loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-60" />
       </div>
 
       <motion.div
-        className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-[10px] tracking-[0.26em] text-emerald-200 backdrop-blur-xl"
+        className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-[#B8975B]/30 bg-white/95 px-4 py-1.5 text-[11px] font-semibold tracking-[0.2em] text-[#8C6D34] shadow-md backdrop-blur-md uppercase"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-120px" }}

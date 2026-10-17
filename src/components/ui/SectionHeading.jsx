@@ -17,12 +17,12 @@ export default function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <div className="text-xs tracking-[0.28em] text-gold-200/80">
+        <div className="text-xs font-semibold tracking-[0.28em] text-[#8C6D34] uppercase">
           {eyebrow}
         </div>
       ) : null}
       <motion.h2
-        className="mt-3 font-display text-4xl leading-[1.05] tracking-wide sm:text-5xl"
+        className="mt-3 font-display text-4xl leading-[1.08] tracking-tight text-[#1A1D20] sm:text-5xl md:text-6xl"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-120px" }}
@@ -32,7 +32,7 @@ export default function SectionHeading({
       </motion.h2>
       {subtitle ? (
         <motion.p
-          className="mt-4 text-sm leading-relaxed text-white/70 sm:text-base"
+          className="mt-4 text-base leading-relaxed text-[#505765] sm:text-lg"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-120px" }}

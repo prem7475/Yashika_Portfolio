@@ -5,16 +5,16 @@ export default function NotFound() {
   return (
     <PageShell className="pt-32 pb-24">
       <div className="container-x">
-        <div className="rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
-          <div className="text-xs tracking-[0.26em] text-white/45">404</div>
-          <h1 className="mt-3 font-display text-4xl tracking-wide text-white">
-            Page not found
+        <div className="rounded-3xl border border-[#B8975B]/25 bg-white p-10 shadow-lg">
+          <div className="text-xs font-bold tracking-[0.25em] text-[#8C6D34] uppercase">404 — NOT FOUND</div>
+          <h1 className="mt-2 font-display text-4xl font-bold text-[#1A1D20]">
+            Page Not Found
           </h1>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70">
-            The page you’re looking for doesn’t exist — or it moved.
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#505765]">
+            The requested page does not exist or has been moved.
           </p>
-          <Link to="/" className="btn-primary mt-8" data-cursor="hover">
-            Back to Home
+          <Link to="/" className="btn-primary mt-8 text-xs" data-cursor="hover">
+            ← Back to Home
           </Link>
         </div>
       </div>

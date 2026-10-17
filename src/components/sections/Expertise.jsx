@@ -3,106 +3,36 @@ import { expertise } from "../../data/siteContent";
 import GlowCard from "../ui/GlowCard";
 import SectionHeading from "../ui/SectionHeading";
 
-function Icon({ i }) {
-  const common = "h-5 w-5";
+function HRIcon({ index }) {
+  const common = "h-6 w-6 text-[#8C6D34]";
 
-  if (i === 0)
+  if (index === 0) {
     return (
-      <svg
-        className={common}
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M4 19V5m0 14h16"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-        />
-        <path
-          d="M7 15l3-3 3 2 6-7"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <svg className={common} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
       </svg>
     );
+  }
 
-  if (i === 1)
+  if (index === 1) {
     return (
-      <svg
-        className={common}
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M4 7h16M4 12h10M4 17h16"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-        />
-        <path
-          d="M18 10v4"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-        />
+      <svg className={common} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
       </svg>
     );
+  }
 
-  if (i === 2)
+  if (index === 2) {
     return (
-      <svg
-        className={common}
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 3v18"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-        />
-        <path
-          d="M7 8l5-5 5 5"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M7 16l5 5 5-5"
-          stroke="currentColor"
-          strokeWidth="1.6"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
+      <svg className={common} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
       </svg>
     );
+  }
 
   return (
-    <svg
-      className={common}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4 5h16v14H4z"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M7 9h10M7 12h6M7 15h8"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
+    <svg className={common} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
     </svg>
   );
 }
@@ -112,53 +42,47 @@ export default function Expertise() {
     <section className="relative py-16 sm:py-20 md:py-28" id="expertise">
       <div className="container-x">
         <SectionHeading
-          eyebrow="SERVICES / EXPERTISE"
-          title="Agency‑style. Finance‑first."
-          subtitle="Positioned like a business website — because your value is the deliverable. Each card is designed to feel premium, with glow interactions and crisp hierarchy."
+          eyebrow="CORE COMPETENCY & DOMAIN EXPERTISE"
+          title="Strategic HR & Operational Capabilities"
+          subtitle="Designed around the complete employee journey — from candidate sourcing and structured interviewing to HR SOPs, employee feedback, and campus leadership."
         />
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {expertise.map((item, i) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-120px" }}
-              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.65, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
-              <GlowCard className="group p-7 transition-transform duration-300 hover:-translate-y-1">
-                <div className="flex items-start justify-between gap-6">
+              <GlowCard className="group p-7 sm:p-8 bg-white border-[#B8975B]/25 hover:border-[#8C6D34] shadow-md transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-[#B8975B]/30 bg-[#FAF7F2] shadow-sm">
+                    <HRIcon index={i} />
+                  </div>
                   <div>
-                    <div className="flex items-center gap-3">
-                      <div className="grid h-11 w-11 place-items-center rounded-2xl border border-white/10 bg-white/5 text-gold-200 shadow-gold">
-                        <Icon i={i} />
-                      </div>
-                      <h3 className="text-xl font-semibold text-white">
-                        {item.title}
-                      </h3>
-                    </div>
-
-                    <p className="mt-4 text-sm leading-relaxed text-white/70">
+                    <h3 className="font-display text-2xl font-bold text-[#1A1D20]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-[#505765]">
                       {item.desc}
                     </p>
 
-                    <ul className="mt-6 space-y-2 text-sm text-white/65">
+                    <ul className="mt-5 space-y-2.5 text-sm text-[#3E4450]">
                       {item.bullets.map((b) => (
-                        <li key={b} className="flex items-center gap-2">
-                          <span className="h-1.5 w-1.5 rounded-full bg-gold-400/80" />
+                        <li key={b} className="flex items-start gap-2.5">
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#8C6D34]" />
                           <span>{b}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-
-                  <div className="hidden h-16 w-16 rounded-3xl bg-[radial-gradient(circle_at_center,rgba(200,168,90,0.20),transparent_70%)] blur-xl md:block" />
                 </div>
 
-                <div className="mt-8 h-px w-full bg-gradient-to-r from-transparent via-white/12 to-transparent" />
-
-                <div className="mt-5 text-xs tracking-[0.25em] text-white/50 group-hover:text-gold-200/80">
-                  DELIVERABLE-READY OUTPUT
+                <div className="mt-6 pt-4 border-t border-[#B8975B]/15 flex items-center justify-between text-xs font-semibold tracking-[0.18em] text-[#8C6D34] uppercase">
+                  <span>HR Deliverable Focus</span>
+                  <span>0{i + 1}</span>
                 </div>
               </GlowCard>
             </motion.div>
